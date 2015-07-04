@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get '/classmates' => 'years#classmates', :as => :classmates
+
+  get '/users/:id/cancel' => 'users#cancel', :as => :users_cancel
+  get '/users/:id/profile' => 'users#profile', :as => :users_profile
+  put '/users/profile' => 'users#update_profile', :as => :edit_users_profile
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks'}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +60,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  comfy_route :cms_admin, :path => '/admin'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
+
 end

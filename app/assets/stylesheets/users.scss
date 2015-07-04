@@ -1,0 +1,38 @@
+div.profile-wrapper {
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid white;
+	width: 400px;
+	height: 150px;
+}
+
+div.profile-suggestions-box {
+	padding: 10px;
+	margin: 20px;
+	font-size: 16px;
+
+	div.profile-suggestion {
+		padding: 5px 0px 0px 10px;
+		font-size: 14px;
+	}
+}
+
+div.user-profile {
+	padding: 10px;
+
+
+	div.profile-name {
+		font-size: 24px;
+	}
+  
+  span.profile-year {
+  	color: #ddd;
+  	font-size: 16px;
+  	font-style: italic;
+  }
+
+	a.social-link {
+		padding: 3px;
+		font-size: 14px;
+	}
+}

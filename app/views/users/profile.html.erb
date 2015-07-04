@@ -1,0 +1,36 @@
+<div>
+	This is your current Paly Alumni profile.  
+</div>
+<div>
+	<div style="float:left;">
+		<div class="profile-wrapper" id="profile-preview">
+			<div style="text-align:right;">
+				<%= link_to "Edit", ".#", {:id => "profile-edit-link"} %>
+			</div>
+			<%= render :partial => "profile", :locals => {:user => @user} %>
+		</div>
+		<div id="profile-edit-form" style="display:none;">
+			<%= render :partial => "profile_form", :locals => {:user => @user} %>
+		</div>
+	</div>
+	<div style="float:left;">
+		<% unless @user.suggested_inputs.empty? %>
+			<div class="profile-suggestions-box">
+				Suggestions:
+				<% @user.suggested_inputs.each do |suggestion| %>
+					<div class="profile-suggestion">
+						<%= suggestion %>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	<br style="clear:both;"/>
+</div>
+<script>
+	$('#profile-edit-link').click(function (event) {
+	  $('#profile-preview').hide();
+	  $('#profile-edit-form').show();
+	  event.preventDefault(); // Prevent link from following its href
+	});
+</script>

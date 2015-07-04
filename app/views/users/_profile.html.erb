@@ -1,0 +1,11 @@
+<div class="user-profile">
+	<div class="profile-name">
+		<%= user.display_name %>
+		<span class="profile-year"><%= user.year if user.year %></span>
+	</div>
+	<% user.identities.each do |identity| %>
+		<div class="social-link">
+			<%= render :partial => "/users/social_link", :locals => {:identity => identity} %>
+		</div>
+	<% end %>
+</div>

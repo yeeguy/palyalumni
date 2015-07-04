@@ -1,0 +1,32 @@
+<%= form_for(user, as: :user, url: edit_users_profile_path, html: { method: :put }) do |f| %>
+	<div class="profile-wrapper">
+		<div style="text-align:right;">
+			<%= link_to "Cancel", ".#", {:id => "hide-profile-edit-form" } %>
+		</div>
+		<div class="user-profile">
+			<div class="profile-name">
+				<%= f.text_field :name, :placeholder => "Name" %>
+				<%= f.number_field :year, :min => 1900, :max => Time.new.year+4, :maxlength => 4, :placeholder => "Graduation Year" %>
+			</div>
+			<% user.suggested_identities.each do |identity| %>
+				<div>
+					<% if user.already_identified?(identity[:provider]) %>
+						<%= identity[:name] %>: connected 
+					<% else %>
+						<%= link_to "Connect with #{identity[:name]}", identity[:path], :class => "social-link" %>  
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+<script>
+	$('#hide-profile-edit-form').click(function (event) {
+	  $('#profile-edit-form').hide();
+	  $('#profile-preview').show();
+	  event.preventDefault(); // Prevent link from following its href
+	});
+</script>

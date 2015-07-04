@@ -1,0 +1,9 @@
+<div>
+	Class of <%= @year %>
+</div>
+<div>
+	<% @classmates.each do |user| %>
+		<%= render :partial => 'classmate_card', :locals => {:user => user} %>
+	<% end %>
+	<br style="clear:both;"/>
+</div>

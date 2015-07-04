@@ -1,0 +1,21 @@
+<% if notice || alert %>
+	<div class="flash-bar">	
+		<div>
+			<% if notice %>
+				<p class="notice"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+				<p class="alert"><%= alert %></p>
+			<% end %>
+		</div>
+		<div class="hide-flash-bar">
+			<%= link_to "[x]", ".#", {:id => "hide-flash-bar-x"} %> 
+		</div>
+	</div>
+	<script>
+		$('#hide-flash-bar-x').click(function (event) {
+		  $('.flash-bar').hide();
+		  event.preventDefault(); // Prevent link from following its href
+		});
+	</script>
+<% end %>

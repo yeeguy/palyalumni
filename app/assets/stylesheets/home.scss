@@ -1,0 +1,73 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background: #085608;
+	color:#FFF; 
+	font-family: Arial;
+	font-size: 16px;
+	padding:0px;
+	margin:0px;
+	
+  input {
+  	font-size: 16px;
+  }
+
+	a {
+		color: #fff;
+	}
+
+	div.site-header {
+		padding: 10px;
+		margin: 0px;
+		background: white;
+		color: #000;
+		font-family: Arial;
+		font-size: 14px;
+
+		a {
+			color: #000;
+		}
+	}
+
+	div.flash-bar {
+		background: #ffa;
+		margin: 5px 20px 5px 20px;
+		padding: 1px 0px 1px 0px;
+		text-align: center;
+		font-family: Arial;
+		font-size: 14px;
+		color: black;
+
+		p.alert {
+			color: red;
+			text-emphasis: bold;
+		}
+
+		div.hide-flash-bar {
+			height: 0px;
+			overflow: display;
+			text-align: right;
+			position: relative;
+			top: -42px;
+			margin: 0px 3px 0px 0px;
+
+			a#hide-flash-bar-x {
+				color: #555;
+				font-size: 16px;
+				text-emphasis: bold;
+				text-decoration: none;
+			}
+		}
+
+
+	}
+
+	div.content-yield {
+		padding: 20px;
+	}
+
+	div.actions {
+		padding: 10px 0px 0px 0px;
+	}
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  accepted_by: 1
+  accepted_at: 2015-07-01 19:36:32
+  bounced: false
+
+two:
+  email: MyString
+  accepted_by: 1
+  accepted_at: 2015-07-01 19:36:32
+  bounced: false
