@@ -1,28 +1,22 @@
-== README
+== Paly Alumni website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# TODO GApp for inbound mail
+# TODO https setup for palyalumni.heroku.com
+# TODO send email via Sendgrid/Mailgun/etc
+# TODO invite classmates via email
+# TODO invite classmates via shared link
+# TODO notification when invitation accepted
+# TODO deploy to production
+# TODO set up default CMS template
+# TODO import existing users, send invitation to each
+# TODO post class bulletins/announcements?  threaded?  follow a topic?  notify in realtime?
+# TODO private messages?  ask first?  block?
+# TODO notification preferences
+# TODO security notification when social login is switched to another user
+# TODO tag cloud location/career/education/likes on Profile
+# TODO tag browsing within across classes
+# TODO pre-populate tags with LI, FB, Tw data
+# TODO newsfeed for a class (recent joins, added social login, sent bulletin/message, etc.)
+# TODO newsletter that summarizes newsfeed for a class
+# TODO aggregated social newsfeed for a class
+# TODO remove (destroy) a social identity

@@ -21,6 +21,10 @@
         <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
+      <div>
+        Forgot password?
+        <%= link_to "Reset", users_logged_in_reset_path %>
+      </div>
     </div>
 
     <div style="float:left;padding:10px;">

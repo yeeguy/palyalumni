@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/classmates' => 'years#classmates', :as => :classmates
 
+  get '/users/reset_and_logout' => 'users#logged_in_reset_password', :as => :users_logged_in_reset
   get '/users/:id/cancel' => 'users#cancel', :as => :users_cancel
   get '/users/:id/profile' => 'users#profile', :as => :users_profile
   put '/users/profile' => 'users#update_profile', :as => :edit_users_profile

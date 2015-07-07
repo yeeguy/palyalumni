@@ -74,7 +74,7 @@ class User < ActiveRecord::Base
   def suggested_identities
     [
       {:provider => "facebook", :name => "Facebook", :path => "/users/auth/facebook"},
-      {:provider => "linkedin", :name => "LinkedIn", :path => "/users/auth/linked_in"},
+      {:provider => "linkedin", :name => "LinkedIn", :path => "/users/auth/linkedin"},
       {:provider => "twitter", :name => "Twitter", :path => "/users/auth/twitter"}
     ]
   end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update_profile, :destroy, :cancel, :profile]
+  before_action :set_user, only: [:show, :edit, :update_profile, :destroy, :cancel, :profile, :logged_in_reset_password]
 
   # GET /users/:id.:format
   def show
@@ -54,6 +54,12 @@ class UsersController < ApplicationController
       format.html { redirect_to root_url }
       format.json { head :no_content }
     end
+  end
+
+  def logged_in_reset_password
+    @user.send_reset_password_instructions
+    sign_out @user
+    redirect_to '/', notice: 'Look for password reset instructions in your email inbox.'
   end
   
   private

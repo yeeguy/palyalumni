@@ -4,15 +4,24 @@ class Identity < ActiveRecord::Base
   validates_uniqueness_of :uid, :scope => :provider
 
   def self.find_for_oauth(auth)
-    find_or_create_by(uid: auth.uid, provider: auth.provider)
+    i = find_or_create_by(uid: auth.uid, provider: auth.provider)
+    if i.provider == "linkedin"
+    	i.url = auth.extra.raw_info.publicProfileUrl
+    	i.save
+    end
+    i
   end
 
-  def url
+  def display_url
   	case provider
   	when "facebook"
-  		"http://facebook.com/profile.php?uid=#{uid}"
-  	else
-  		"url_goes_here"
+  		"https://facebook.com/profile.php?uid=#{uid}"
+  	when "linkedin"
+  		url.to_s
+    when "twitter"
+      "https://twitter.com/intent/user?user_id=#{uid}"
+    else
+      url.to_s
   	end
   end
 
