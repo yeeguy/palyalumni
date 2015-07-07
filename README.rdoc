@@ -1,8 +1,7 @@
 == Paly Alumni website
 
-# TODO GApp for inbound mail
-# TODO https setup for palyalumni.heroku.com
-# TODO send email via Sendgrid/Mailgun/etc
+# TODO welcome email upon joining
+# TODO prevent accessing someone else's profile
 # TODO invite classmates via email
 # TODO invite classmates via shared link
 # TODO notification when invitation accepted
@@ -20,3 +19,5 @@
 # TODO newsletter that summarizes newsfeed for a class
 # TODO aggregated social newsfeed for a class
 # TODO remove (destroy) a social identity
+
+# TODO https setup for palyalumni.heroku.com
