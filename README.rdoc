@@ -1,7 +1,5 @@
 == Paly Alumni website
 
-# TODO alpha sort classmates
-# TODO welcome email upon joining
 # TODO invite classmates via email
 # TODO invite classmates via shared link
 # TODO notification when invitation accepted

@@ -3,7 +3,6 @@ class YearsController < ApplicationController
 
 	def classmates
 		@classmates = User.where(:year => @year).all.sort{|a,b| a.name <=> b.name}
-
 	end
 
 	protected

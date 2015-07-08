@@ -1,0 +1,11 @@
+<p>Welcome to the Paly Alumni and Friends network!</p>
+
+<p>Please confirm your account email by clicking the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>You'll be asked to login with your email (<%= @email %>) and password after you click.</p>
+
+<p>If you did not sign up for the Paly Alumni and Friends network, please ignore this email.</p>
+
+<p>Thanks!</p>
