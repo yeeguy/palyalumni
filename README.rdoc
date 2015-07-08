@@ -1,12 +1,10 @@
 == Paly Alumni website
 
+# TODO alpha sort classmates
 # TODO welcome email upon joining
-# TODO prevent accessing someone else's profile
 # TODO invite classmates via email
 # TODO invite classmates via shared link
 # TODO notification when invitation accepted
-# TODO deploy to production
-# TODO set up default CMS template
 # TODO import existing users, send invitation to each
 # TODO post class bulletins/announcements?  threaded?  follow a topic?  notify in realtime?
 # TODO private messages?  ask first?  block?
