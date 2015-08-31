@@ -28,6 +28,7 @@ gem 'omniauth-linkedin'
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'will_paginate'
 gem 'rmagick'
+gem 'aws-sdk', '~> 1.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
