@@ -80,7 +80,7 @@ Rails.application.configure do
 
 
   # General Settings
-  config.app_domain = 'palyalumni.org'
+  config.app_domain = 'www.palyalumni.org'
 
   # Email
   config.action_mailer.delivery_method = :smtp
