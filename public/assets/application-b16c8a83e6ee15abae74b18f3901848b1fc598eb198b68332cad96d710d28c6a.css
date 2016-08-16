@@ -1,0 +1,142 @@
+/* line 4, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body {
+  background: #085608;
+  color: #FFF;
+  font-family: Arial;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 12, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body input {
+  font-size: 16px;
+}
+/* line 16, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body a {
+  color: #fff;
+}
+/* line 21, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.site-header {
+  padding: 10px;
+  margin: 0px;
+  background: white;
+  color: #000;
+  font-family: Arial;
+  font-size: 14px;
+}
+/* line 29, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.site-header a {
+  color: #000;
+}
+/* line 33, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.site-header a.navbar-link {
+  font-weight: bold;
+}
+/* line 39, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.flash-bar {
+  background: #ffa;
+  margin: 5px 20px 5px 20px;
+  padding: 1px 0px 1px 0px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+  color: black;
+}
+/* line 48, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.flash-bar p.alert {
+  color: red;
+  text-emphasis: bold;
+}
+/* line 53, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.flash-bar div.hide-flash-bar {
+  height: 0px;
+  overflow: display;
+  text-align: right;
+  position: relative;
+  top: -42px;
+  margin: 0px 3px 0px 0px;
+}
+/* line 61, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.flash-bar div.hide-flash-bar a#hide-flash-bar-x {
+  color: #555;
+  font-size: 16px;
+  text-emphasis: bold;
+  text-decoration: none;
+}
+/* line 72, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.content-yield {
+  padding: 20px;
+}
+/* line 76, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body div.actions {
+  padding: 10px 0px 0px 0px;
+}
+/* line 81, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/home.scss */
+body form div.field {
+  padding-top: 10px;
+}
+/* line 1, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.profile-wrapper {
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid white;
+  width: 400px;
+  height: 150px;
+}
+
+/* line 9, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.profile-suggestions-box {
+  padding: 10px;
+  margin: 20px;
+  font-size: 16px;
+}
+/* line 14, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.profile-suggestions-box div.profile-suggestion {
+  padding: 5px 0px 0px 10px;
+  font-size: 14px;
+}
+
+/* line 20, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.user-profile {
+  padding: 10px;
+}
+/* line 24, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.user-profile div.profile-name {
+  font-size: 24px;
+}
+/* line 28, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.user-profile span.profile-year {
+  color: #ddd;
+  font-size: 16px;
+  font-style: italic;
+}
+/* line 34, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/users.scss */
+div.user-profile a.social-link {
+  padding: 3px;
+  font-size: 14px;
+}
+/* line 5, /Users/robertselwyn/Desktop/DesktopCode/paly-alumni/palyalumni/app/assets/stylesheets/years.scss */
+div.profile-card {
+  float: left;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid white;
+  width: 400px;
+  height: 150px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

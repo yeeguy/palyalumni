@@ -9,7 +9,7 @@ ComfortableMexicanSofa.configure do |config|
 
   # Module responsible for authentication. You can replace it with your own.
   # It simply needs to have #authenticate method. See http_auth.rb for reference.
-    config.admin_auth = 'ComfyAdminAuthentication'
+  #   config.admin_auth = 'ComfyAdminAuthentication'
 
   # Module responsible for authorization on admin side. It should have #authorize
   # method that returns true or false based on params and loaded instance
@@ -30,18 +30,8 @@ ComfortableMexicanSofa.configure do |config|
   # http://rdoc.info/gems/paperclip/2.3.8/Paperclip/Storage/S3, and for
   # filesystem see: http://rdoc.info/gems/paperclip/2.3.8/Paperclip/Storage/Filesystem
   # If you are using S3 and HTTPS, pass :s3_protocol => '' to have URLs that use the protocol of the page
-  #     config.upload_file_options = {:url => '/system/:class/:id/:attachment/:style/:filename'}
-  config.upload_file_options = {
-    :whiny => false,
-    :storage => :s3,
-    :s3_credentials => {:access_key_id => ENV["S3_ACCESS_KEY_ID"], :secret_access_key => ENV["S3_SECRET_ACCESS_KEY"]},
-    :bucket => ENV["S3_BUCKET_NAME"], 
-    :s3_permissions => :public_read,
-    :s3_host_alias => ENV["S3_HOSTNAME"],
-    :url => ":s3_domain_url",
-    :path => "/uploaded_files/:basename.:extension",
-    :styles => {:thumb => "200x200>" }
-  }
+  #   config.upload_file_options = {:url => '/system/:class/:id/:attachment/:style/:filename'}
+
   # Sofa allows you to setup entire site from files. Database is updated with each
   # request (if necessary). Please note that database entries are destroyed if there's
   # no corresponding file. Fixtures are disabled by default.
@@ -106,17 +96,15 @@ end
 
 # Default credentials for ComfortableMexicanSofa::AccessControl::AdminAuthentication
 # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-# ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = ENV['CMS_USER']
-# ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = ENV['CMS_PASS']
+ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = 'username'
+ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = 'password'
 
 # Uncomment this module and `config.admin_auth` above to use custom admin authentication
-module ComfyAdminAuthentication
-  def authenticate
-    unless current_user && current_user.is_cms_admin?
-      redirect_to new_user_session_path
-    end
-  end
-end
+# module ComfyAdminAuthentication
+#   def authenticate
+#     return true
+#   end
+# end
 
 # Uncomment this module and `config.admin_authorization` above to use custom admin authorization
 # module ComfyAdminAuthorization

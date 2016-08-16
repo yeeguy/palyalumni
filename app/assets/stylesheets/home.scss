@@ -17,6 +17,7 @@ body {
 		color: #fff;
 	}
 
+
 	div.site-header {
 		padding: 10px;
 		margin: 0px;
@@ -28,6 +29,11 @@ body {
 		a {
 			color: #000;
 		}
+
+		a.navbar-link {
+			font-weight: bold;
+		}	
+
 	}
 
 	div.flash-bar {

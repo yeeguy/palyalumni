@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  comfy_route :cms_admin, :path => '/admin'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
+
+
   get '/classmates' => 'years#classmates', :as => :classmates
 
   get '/users/reset_and_logout' => 'users#logged_in_reset_password', :as => :users_logged_in_reset
@@ -62,9 +68,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  comfy_route :cms_admin, :path => '/admin'
-
-  # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
 
 end
