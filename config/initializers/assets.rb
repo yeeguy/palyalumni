@@ -9,3 +9,9 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( foundation/foundation.css )
+Rails.application.config.assets.precompile += %w( foundation/app.css )
+Rails.application.config.assets.precompile += %w( foundation/vendor/jquery.js )
+Rails.application.config.assets.precompile += %w( foundation/vendor/what-input.js )
+Rails.application.config.assets.precompile += %w( foundation/vendor/foundation.js )
+Rails.application.config.assets.precompile += %w( foundation/app.js )

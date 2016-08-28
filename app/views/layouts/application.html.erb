@@ -2,10 +2,16 @@
 <html>
 <head>
   <title>Paly Alumni & Friends</title>
+  <%= stylesheet_link_tag "foundation/foundation", "foundation/app" %>
+  <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render :partial => "layouts/zendesk_js" %>
+  <script src="/assets/foundation/js/vendor/jquery.js"></script>
+  <script src="/assets/foundation/js/vendor/what-input.js"></script>
+  <script src="/assets/foundation/js/vendor/foundation.js"></script>
+  <script src="/assets/foundation/js/app.js"></script>
 </head>
 <body>
   <%= render :partial => "layouts/facebook_js" %>
