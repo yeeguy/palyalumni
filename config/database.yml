@@ -26,7 +26,11 @@ development:
   <<: *default
   database: palyalumni_development
   host: localhost
-
+  username: palyalumni
+  password: palyalumni
+  
 production:
   <<: *default
   database: palyalumni_production
+  username: palyalumni
+  password: palyalumni
