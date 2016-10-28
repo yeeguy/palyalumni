@@ -1,6 +1,6 @@
 ---
-label: goteem
-layout: test
+label: Home
+layout: home
 parent: 
 target_page: 
 categories: []
