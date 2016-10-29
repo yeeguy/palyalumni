@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  comfy_route :blog_admin, :path => '/admin'
+  comfy_route :blog, :path => '/blog'
+
   comfy_route :cms_admin, :path => '/admin'
 
   # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
 
 
   get '/classmates' => 'years#classmates', :as => :classmates
@@ -13,6 +15,14 @@ Rails.application.routes.draw do
   put '/users/profile' => 'users#update_profile', :as => :edit_users_profile
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks'}
+
+
+
+  comfy_route :cms, :path => '/', :sitemap => false
+  
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,6 +30,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
+
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

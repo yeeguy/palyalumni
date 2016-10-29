@@ -65,5 +65,9 @@ group :development, :test do
 
   # see emails on localhost
   gem 'mailcatcher'
+
+  # Comfy Blog
+  gem 'comfy_blog', '~> 1.12.0'
+  
 end
 
