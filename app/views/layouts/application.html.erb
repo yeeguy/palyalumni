@@ -3,24 +3,52 @@
 <head>
   <title>Paly Alumni & Friends</title>
   <%= stylesheet_link_tag "foundation/foundation", "foundation/app" %>
-  <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= render :partial => "layouts/zendesk_js" %>
-  <script src="/assets/foundation/js/vendor/jquery.js"></script>
-  <script src="/assets/foundation/js/vendor/what-input.js"></script>
-  <script src="/assets/foundation/js/vendor/foundation.js"></script>
-  <script src="/assets/foundation/js/app.js"></script>
+  <%= render :partial => "layouts/zendesk_js" %>  
 </head>
 <body>
   <%= render :partial => "layouts/facebook_js" %>
   <%= render :partial => "layouts/google_analytics_js" %>
   <%= render :partial => "layouts/site_header" %>
   <%= render :partial => "layouts/flash_bar" %>
-  <h1>Paly Alumni Test Header</h1>
+  <div class = "row">
+    <h1>Paly Alumni</h1>
+    
+	<!--asdf;aksljf;alksjf;aklsfjdks-->
+	<div class="top-bar">
+	  <div class="top-bar-title">
+	    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+	      <button class="menu-icon dark" type="button" data-toggle></button>
+	    </span>
+	    <strong>Paly Alumni</strong>
+	  </div>
+	  <div id="responsive-menu">
+	    <div class="top-bar-left">
+	      <ul class="dropdown menu" data-dropdown-menu>
+		<li><a href="#">Home</a></li>
+		<li>
+		  <a href="#">About</a>
+		  <ul class="menu vertical">
+		    <li><a href="#">One</a></li>
+		    <li><a href="#">Two</a></li>
+		    <li><a href="#">Three</a></li>
+		  </ul>
+		</li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Reunions</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	  </div>
+  </div>
   <div class="content-yield">
 		<%= yield %>
   </div>
+  <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
