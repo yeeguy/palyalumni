@@ -14,61 +14,13 @@ body {
 	}
 
 	a {
-		color: #fff;
-	}
-
-
-	div.site-header {
-		padding: 10px;
-		margin: 0px;
-		background: white;
 		color: #000;
-		font-family: Arial;
-		font-size: 14px;
-
-		a {
-			color: #000;
-		}
-
-		a.navbar-link {
-			font-weight: bold;
-		}	
-
 	}
 
-	div.flash-bar {
-		background: #ffa;
-		margin: 5px 20px 5px 20px;
-		padding: 1px 0px 1px 0px;
-		text-align: center;
-		font-family: Arial;
-		font-size: 14px;
-		color: black;
-
-		p.alert {
-			color: red;
-			text-emphasis: bold;
-		}
-
-		div.hide-flash-bar {
-			height: 0px;
-			overflow: display;
-			text-align: right;
-			position: relative;
-			top: -42px;
-			margin: 0px 3px 0px 0px;
-
-			a#hide-flash-bar-x {
-				color: #555;
-				font-size: 16px;
-				text-emphasis: bold;
-				text-decoration: none;
-			}
-		}
-
-
+	div.top-bar a:hover {
+		color: #085608;
 	}
-
+	
 	div.content-yield {
 		padding: 20px;
 	}
@@ -93,7 +45,7 @@ body {
 
 	.footer {
 		background-color: black;
-		padding: 2rem 4rem;
+		padding: 2rem 4rem; //2,4
 		text-align: center;
 		color: $text-color;
 		i {
@@ -106,7 +58,7 @@ body {
 			font-size: 1em;
 			font-weight: 400;
 			text-transform: uppercase;
-			margin-top: 2.5rem;
+			margin-top: 0.5rem;//2.5
 			margin-bottom: 10px;
 		}
 		p, a {
@@ -120,7 +72,7 @@ body {
 		.footer {
 			.columns:nth-child(n+2) {
 				border-left: 1px solid scale-color($text-color, $lightness: -30%);
-				min-height: 280px;
+				min-height: 180px;//280
 			}
 		}
 	}
