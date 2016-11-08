@@ -5,32 +5,11 @@
       <ul class="orbit-container">
     	<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
     	<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-    
-    	<li class="is-active orbit-slide">
-      		<img class="orbit-image" src="http://cat-wallpaper.ambientcat.com/wallpapers-800-600/Maine-Coon-Bicolor-kitten-Fantastic-native-cat-113.jpg" alt="Space">
-          <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
-    	</li>
-   	 
-    	<li class="orbit-slide">
-      		<img class="orbit-image" src="https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-adult-landing-hero.ashx" alt="Space">
-      		<figcaption class="orbit-caption">Lets Rocket!</figcaption>
-   		</li>
-    
-    	<li class="orbit-slide">
-      		<img class="orbit-image" src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="Space">
-      		<figcaption class="orbit-caption">Encapsulating</figcaption>
-    	</li>
-    
-    	<li class="orbit-slide">
-      		<img class="orbit-image" src="http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg" alt="Space">
-      		<figcaption class="orbit-caption">Outta This World</figcaption>
-    	</li>
+        
+    	{{ cms:page:images:rich_text }}
+        
   	</ul>
   	<nav class="orbit-bullets">
-    	<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-    	<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-    	<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-    	<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
   	</nav>
 	</div>
     </div>
@@ -48,4 +27,36 @@
 	</div>
   </div>
 </div>
-    
+
+<script type="text/javascript">
+  var wrapper = document.getElementsByClassName("orbit-container")[0];
+  var images = wrapper.getElementsByTagName("img");
+  var bullets = document.getElementsByClassName("orbit-bullets")[0];
+  var innerHTMLs = [];
+  
+  for (var i = 0; i < images.length; i++) {
+    console.log(images.length);
+    images[i].classList.add("orbit-image");
+    innerHTMLs.push("<li class='is-active orbit-slide'>" + images[i].outerHTML + "</li>");
+  }
+  
+  while (wrapper.hasChildNodes()) {
+    wrapper.removeChild(wrapper.lastChild);
+  }
+
+  wrapper.innerHTML += "<button class='orbit-previous'><span class='show-for-sr'>Previous Slide</span>&#9664;&#xFE0E;</button><button class='orbit-next'><span class='show-for-sr'>Next Slide</span>&#9654;&#xFE0E;</button>";
+  
+  var hasActive = false;
+  
+  for (var i = 0; i < innerHTMLs.length; i++) {
+    console.log(innerHTMLs[i]);
+    if (!hasActive){
+      wrapper.innerHTML += innerHTMLs[i];
+      bullets.innerHTML += "<button class='is-active' data-slide='" + i + "'></button>";
+      hasActive = true;
+    } else {
+      wrapper.innerHTML += innerHTMLs[i];
+      bullets.innerHTML += "<button data-slide='" + i + "'></button>";
+    }
+  }
+</script>
