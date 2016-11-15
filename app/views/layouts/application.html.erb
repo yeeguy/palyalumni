@@ -4,7 +4,6 @@
   <title>Paly Alumni & Friends</title>
   <%= stylesheet_link_tag "foundation/foundation", "foundation/app" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render :partial => "layouts/zendesk_js" %>  
 </head>
@@ -64,8 +63,9 @@
       </div>
     </div>
     </footer>
-<!--End footer stuff-->
-<%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
+  <!--End footer stuff-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <script>
     $(document).foundation();
   </script>
