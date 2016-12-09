@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # Make sure this routeset is defined last
 
+  get '/', to: redirect('/blog')
 
   get '/classmates' => 'years#classmates', :as => :classmates
 
