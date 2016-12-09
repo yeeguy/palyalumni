@@ -10,8 +10,11 @@
 <body>
   <%= render :partial => "layouts/facebook_js" %>
   <%= render :partial => "layouts/google_analytics_js" %>
-  <div class = "row">
-    <h1 style="float:left;">Paly Alumni</h1>
+
+  <!--Header-->
+  <div class ="row" style="padding: 15px">
+    <%=image_tag("vikinglogo_md.png")%>
+    <h1 style="vertical-align:middle; display:inline; float:left;">Paly Alumni</h1>
     <% unless current_user.blank? %>
     signed in
     <% else %>
@@ -35,47 +38,55 @@
       </li>
     </ul>
   </div>
-  <!--Nav bar-->
-  <div class="row">
+  </div>
+  
+    
+  <!--Navbar-->
+  <div class = "row">
     <div class="top-bar">
+      <div class="top-bar-title">
+	<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+	  <button class="menu-icon dark" type="button" data-toggle></button>
+	</span>
+	<!--<strong>Site Title</strong>-->
+      </div>
       <div id="responsive-menu">
-	<div class="top-bar-left">
+	<div class="top-bar-left stacked-for-small">
 	  <ul class="dropdown menu" data-dropdown-menu>
-	    <li><a href="/blog/">Home</a></li>
+            <li><a href="/blog/">Home</a></li>
 	    <li>
-	      <a href="/about-us">About</a>
-	      <ul class="menu vertical">
+              <a href="/about-us/">About</a>
+              <ul class="menu vertical">
 		<li><a href="/about-us/paly-update">Paly Update</a></li>
 		<li><a href="/about-us/construction">Construction</a></li>
-	      </ul>
-	    </li>
-	    <li><a href="/reunions">Reunions</a></li>
-	    <li><a href="/donate">Donate</a></li>
+              </ul>
+            </li>
+            <li><a href="/reunions">Reunions</a></li>
+            <li><a href="/donate">Donate</a></li>
+>>>>>>> 8d36767a9ff25c94c93ce98abac61a6450cc1fae
 	    <li><a href="/contact-us">Contact Us</a></li>
 	  </ul>
 	</div>
       </div>
     </div>
   </div>
+  <!--End Navbar-->
 
 
-  
-  <div class="content-yield">
-		<%= yield %>
+  <div class="row"> 
+    <div class="content-yield">
+      <%= yield %>
+    </div>
   </div>
 
-    <!--Footer stuff below-->
-  <!-- For Foundation Icons, put this in your head -->
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
   <!-- Footer -->
   <footer class="footer">
     <div class="row full-width">
-      <div class="small-12 medium-3 large-9 columns">
-	<!--<i class="fi-laptop"></i>-->
+      <div class="small-12 medium-9 large-9 columns">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores alias ea sunt facilis impedit fuga dignissimos illo quaerat iure in nobis id quos, eaque nostrum! Unde, voluptates suscipit repudiandae!</p>
       </div>
-      <div class="small-6 medium-3 large-3 columns">
+      <div class="small-12 medium-3 large-3 columns">
 	<h4>Reach Us</h4>
 	<p>Alumni and Friends of Palo Alto High School
 	  <br>50 Embarcadero Rd
@@ -86,11 +97,11 @@
       </div>
     </div>
     </footer>
-  <!--End footer stuff-->
+  <!--End footer-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <script>
     $(document).foundation();
-  </script>
+  </scri pt>
 </body>
 </html>
