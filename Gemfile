@@ -30,6 +30,9 @@ gem 'will_paginate'
 gem 'rmagick'
 gem 'aws-sdk', '~> 1.6'
 
+# Comfy Blog
+gem 'comfy_blog', '~> 1.12.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -66,8 +69,6 @@ group :development, :test do
   # see emails on localhost
   gem 'mailcatcher'
 
-  # Comfy Blog
-  gem 'comfy_blog', '~> 1.12.0'
   
 end
 
