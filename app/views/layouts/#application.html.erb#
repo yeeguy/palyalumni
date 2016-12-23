@@ -47,7 +47,7 @@
       <div class="top-bar-title">
 	<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
 	  <button class="menu-icon dark" type="button" data-toggle></button>
-	</span>
+v	</span>
 	<!--<strong>Site Title</strong>-->
       </div>
       <div id="responsive-menu">
@@ -101,6 +101,6 @@
   <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <script>
     $(document).foundation();
-  </script>
+  </scri pt>
 </body>
 </html>
