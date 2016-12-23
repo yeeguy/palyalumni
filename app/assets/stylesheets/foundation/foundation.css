@@ -295,7 +295,7 @@ input[type="radio"] {
    */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-f  height: auto; }
+  height: auto; }
 
 /**
    * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
