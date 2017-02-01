@@ -1,16 +1,19 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	font-family: Arial;
+}
+
 body {
 	background: #white;
 	color:black; 
-	font-family: Helvetica, Arial;
 	font-size: 16px;
 	padding:0px;
 	margin:0px;
 
 	h1 {
-	   font-family: Helvetica;
+	   font-family: Arial;
 	}
 
 	input {

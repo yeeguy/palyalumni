@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paly Alumni & Friends</title>
+  <title>Alumni & Friends of Palo Alto High School</title>
   <%= stylesheet_link_tag "foundation/foundation", "foundation/app" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,7 +14,7 @@
   <!--Header-->
   <div class ="row" style="padding: 15px">
     <%=image_tag("vikinglogo_md.png")%>
-    <h1 style="vertical-align:middle; display:inline;">Paly Alumni</h1>
+    <h1 style="vertical-align:middle; display:inline;">Alumni & Friends of Palo Alto High School</h1>
     <ul style="float:right;" class="dropdown menu" data-dropdown-menu>
       <li>
 	<% if user_signed_in? %>
@@ -49,13 +49,9 @@
 	<div class="top-bar-left stacked-for-small">
 	  <ul class="dropdown menu" data-dropdown-menu>
             <li><a href="/blog/">Home</a></li>
-	    <li>
-              <a href="/about-us/">About Us</a>
-              <ul class="menu vertical">
-		<li><a href="/about-us/paly-update">Class Info</a></li>
-		<li><a href="/about-us/construction">Campus Update</a></li>
-              </ul>
-            </li>
+	    <li><a href="/about-us/">About Us</a></li>
+	    <li><a href="/about-us/paly-update">Class Info</a></li>
+	    <li><a href="/about-us/construction">Campus Update</a></li>
             <li><a href="/reunions">Reunions</a></li>
             <li><a href="/donate">Donate</a></li>
 	    <li><a href="/contact-us">Contact Us</a></li>
@@ -78,10 +74,10 @@
   <footer class="footer">
     <div class="row full-width">
       <div class="small-12 medium-9 large-9 columns">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores alias ea sunt facilis impedit fuga dignissimos illo quaerat iure in nobis id quos, eaque nostrum! Unde, voluptates suscipit repudiandae!</p>
+	<p>Created in the year of 2017 by Paly Robotics Web Team for Alumni and Friends of Palo Alto High School. We update every semester or more often if needed. Read all eight pages and then go to <a href="http://www.paly.net">Paly's Website</a> for information about Paly life and activities.</p>
       </div>
       <div class="small-12 medium-3 large-3 columns">
-	<h4>Reach Us</h4>
+	<h4>Contact Us</h4>
 	<p>Alumni and Friends of Palo Alto High School
 	  <br>50 Embarcadero Rd
 	  <br>Palo Alto, CA 94301
