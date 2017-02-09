@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-1;2cruby '2.3.1'
+ruby '2.3.1'
 
 # load secrets from .env
 gem 'dotenv-rails'
