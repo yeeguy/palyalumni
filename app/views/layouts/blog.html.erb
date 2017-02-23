@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paly Alumni & Friends</title>
+  <title>Alumni & Friends of Palo Alto High School</title>
   <%= stylesheet_link_tag "foundation/foundation", "foundation/app" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render :partial => "layouts/zendesk_js" %>  
 </head>
 <body>
   <%= render :partial => "layouts/facebook_js" %>
   <%= render :partial => "layouts/google_analytics_js" %>
-  <div class = "row">
-    <h1>Paly Alumni</h1>
+
+  <!--Header-->
+  <div class ="row" style="padding: 15px">
+    <%=image_tag("vikinglogo_md.png")%>
+    <h1 style="vertical-align:middle; display:inline;">Alumni & Friends of Palo Alto High School</h1>
+    <ul style="float:right;" class="dropdown menu" data-dropdown-menu>
+      <li>
+	<% if user_signed_in? %>
+	<a href="#"><%= current_user.display_name %></a>
+	<ul class="menu">
+	  <li><%= link_to "Profile", users_profile_path %></li>
+	  <li><%= link_to "Settings", edit_user_registration_path %></li>
+	  <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+	<% else %>
+	<a href="#">Guest</a>
+	<ul class="menu">
+	  <li><%= link_to "Sign up", new_user_registration_path %></li>
+	  <li><%= link_to "Login", new_user_session_path %></li>
+	<% end %>
+	</ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  
     
-	<!--asdf;aksljf;alksjf;aklsfjdks-->
-	<div class="top-bar">
-	  <div id="responsive-menu">
-	    <div class="top-bar-left">
-	      <ul class="dropdown menu" data-dropdown-menu>
-		<li><a href="/blog/">Home</a></li>
-		<li>
-		  <a href="/about-us">About</a>
-		  <ul class="menu vertical">
-		    <li><a href="/about-us/paly-update">Paly Update</a></li>
-		    <li><a href="/about-us/construction">Construction</a></li>
-		  </ul>
-		</li>
-		<li><a href="/reunions">Reunions</a></li>
-		<li><a href="/donate">Donate</a></li>
-		<li><a href="/contact-us">Contact Us</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	  </div>
+  <!--Navbar-->
+  <div class = "row">
+    <div class="top-bar">
+      <div class="top-bar-title">
+	<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+	  <button class="menu-icon dark" type="button" data-toggle></button>
+	</span>
+	<!--<strong>Site Title</strong>-->
+      </div>
+      <div id="responsive-menu">
+	<div class="top-bar-left stacked-for-small">
+	  <ul class="dropdown menu" data-dropdown-menu>
+            <li><a href="/blog/">Home</a></li>
+	    <li><a href="/about-us/">About Us</a></li>
+	    <li><a href="/class-info">Class Info</a></li>
+	    <li><a href="/campus-update">Campus Update</a></li>
+            <li><a href="/reunions">Reunions</a></li>
+            <li><a href="/donate">Donate</a></li>
+	    <li><a href="/contact-us">Contact Us</a></li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+  </div>
+  <!--End Navbar-->
+
+  <!--Flash bar-->
+  <%= render :partial => "layouts/flash_bar" %>
+
+  <!--School Photo-->
+  <div class = "row">
+    <%=image_tag("schoolimage.png")%>
   </div>
 
-
-  
-  <div class="content-yield row">
-    <div class="small-12 columns">
+  <div class="row"> 
+    <div class="content-yield">
       <%= yield %>
     </div>
   </div>
 
-    <!--Footer stuff below-->
-  <!-- For Foundation Icons, put this in your head -->
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-
   <!-- Footer -->
   <footer class="footer">
     <div class="row full-width">
-      <div class="small-12 medium-3 large-9 columns">
-	<!--<i class="fi-laptop"></i>-->
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores alias ea sunt facilis impedit fuga dignissimos illo quaerat iure in nobis id quos, eaque nostrum! Unde, voluptates suscipit repudiandae!</p>
+      <div class="small-12 medium-9 large-9 columns">
+	<p>Created in the year of 2017 by Paly Robotics Web Team for Alumni and Friends of Palo Alto High School. We update every semester or more often if needed. Read all eight pages and then go to <a href="http://www.paly.net">Paly's Website</a> for information about Paly life and activities.</p>
       </div>
-      <div class="small-6 medium-3 large-3 columns">
-	<h4>Reach Us</h4>
+      <div class="small-12 medium-3 large-3 columns">
+	<h4>Contact Us</h4>
 	<p>Alumni and Friends of Palo Alto High School
 	  <br>50 Embarcadero Rd
 	  <br>Palo Alto, CA 94301
@@ -66,8 +93,9 @@
       </div>
     </div>
     </footer>
-<!--End footer stuff-->
-<%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
+  <!--End footer-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "foundation/vendor/jquery", "foundation/vendor/what-input", "foundation/vendor/foundation", "foundation/app" %>
   <script>
     $(document).foundation();
   </script>
